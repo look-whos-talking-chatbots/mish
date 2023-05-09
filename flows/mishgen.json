@@ -1,0 +1,6873 @@
+{
+  "version": "v1.1",
+  "name": "mishgen",
+  "description": "Generative MISH: Motivational Intervieving for Sexual Health bot",
+  "slot_fillers": {
+    "static_slots": {
+      "params.sense.number-comment": [
+        {
+          "conditions": [
+            [
+              "params.sense.number",
+              3,
+              "<="
+            ]
+          ],
+          "text": [
+            "little sense"
+          ]
+        },
+        {
+          "conditions": [
+            [
+              "params.sense.number",
+              3,
+              ">"
+            ],
+            [
+              "params.sense.number",
+              7,
+              "<"
+            ]
+          ],
+          "text": [
+            "some sense"
+          ]
+        },
+        {
+          "conditions": [
+            [
+              "params.sense.number",
+              7,
+              ">="
+            ]
+          ],
+          "text": [
+            "a lot of sense"
+          ]
+        }
+      ],
+      "params.sense.reason-comment": [
+        {
+          "conditions": [
+            [
+              "params.sense.reason",
+              "virgin",
+              "=="
+            ]
+          ],
+          "text": [
+            "virginity means that getting STIs is ruled out"
+          ]
+        },
+        {
+          "conditions": [
+            [
+              "params.sense.reason",
+              "monogamy",
+              "=="
+            ]
+          ],
+          "text": [
+            "being exclusive means not getting STIs"
+          ]
+        },
+        {
+          "conditions": [
+            [
+              "params.sense.reason",
+              "trust",
+              "=="
+            ]
+          ],
+          "text": [
+            "not using condoms with your partner indicates trust that goes both ways"
+          ]
+        },
+        {
+          "conditions": [
+            [
+              "params.sense.reason",
+              "pregnancy",
+              "=="
+            ]
+          ],
+          "text": [
+            "using other forms of birth control should be sufficient"
+          ]
+        },
+        {
+          "conditions": [
+            [
+              "params.sense.reason",
+              "tested-before",
+              "=="
+            ]
+          ],
+          "text": [
+            "having been tested before means no STIs"
+          ]
+        },
+        {
+          "conditions": [
+            [
+              "params.sense.reason",
+              "obvious-symptoms",
+              "=="
+            ]
+          ],
+          "text": [
+            "STI symptoms are obvious and can be addressed accordingly"
+          ]
+        },
+        {
+          "conditions": [
+            [
+              "params.sense.reason",
+              "severity",
+              "=="
+            ]
+          ],
+          "text": [
+            "STI symptoms aren't really that bad"
+          ]
+        },
+        {
+          "conditions": [
+            [
+              "params.sense.reason",
+              "no-bad-history",
+              "=="
+            ]
+          ],
+          "text": [
+            "having sex without condoms early on has not caused any negative consequences so far"
+          ]
+        }
+      ],
+      "params.evoke.change.benefit.summary-comment": [
+        {
+          "conditions": [
+            [
+              "params.evoke.change.benefit.list",
+              "prevention",
+              "in"
+            ]
+          ],
+          "text": [
+            "you would just feel safer"
+          ]
+        },
+        {
+          "conditions": [
+            [
+              "params.evoke.change.benefit.list",
+              "prevention-pregnancy",
+              "in"
+            ]
+          ],
+          "text": [
+            "you would be less likely to become accidentally pregnant"
+          ]
+        },
+        {
+          "conditions": [
+            [
+              "params.evoke.change.benefit.list",
+              "prevention-sti",
+              "in"
+            ]
+          ],
+          "text": [
+            "you might be less likely to contract an STI"
+          ]
+        },
+        {
+          "conditions": [
+            [
+              "params.evoke.change.benefit.list",
+              "fear",
+              "in"
+            ]
+          ],
+          "text": [
+            "you experience less anxiety and stress about the consequences associated with STIs"
+          ]
+        },
+        {
+          "conditions": [
+            [
+              "params.evoke.change.benefit.list",
+              "fear-pregnancy",
+              "in"
+            ]
+          ],
+          "text": [
+            "you would experience less anxiety about accidentally becoming pregnant"
+          ]
+        },
+        {
+          "conditions": [
+            [
+              "params.evoke.change.benefit.list",
+              "fear-sti",
+              "in"
+            ]
+          ],
+          "text": [
+            "you experience less anxiety and stress about the consequences associated with STIs"
+          ]
+        }
+      ]
+    },
+    "retrieval_slots": {
+      "params.sense.reason-reflection": [
+        {
+          "conditions": [
+            [
+              "params.sense.reason",
+              "virgin",
+              "=="
+            ]
+          ],
+          "text": [
+            "It's understandable that you believe if you were a virgin before your current sexual relationship, then you cannot get an STI.",
+            "You believe that being a virgin before your current sexual relationship means you won\u2019t have had an STI.",
+            "You believe that if your partner (e.g. your boyfriend or girlfriend) was a virgin before your current sexual relationship, they won\u2019t have caught an STI.",
+            "It seems that you can\u2019t get or pass on an STI if you haven\u2019t actually \u201cdone it\u201d before.",
+            "It makes sense to you that these infections can only happen if you have had \u201cactual\u201d sex.",
+            "You think that STIs only happen if you\u2019ve slept with someone before.",
+            "You haven\u2019t had sex before so it makes sense to you that you don\u2019t have an STI."
+          ]
+        },
+        {
+          "conditions": [
+            [
+              "params.sense.reason",
+              "monogamy",
+              "=="
+            ]
+          ],
+          "text": [
+            "It\u2019s quite common to believe that only individuals engaging in casual sex get STIs \u2013 exclusivity means you\u2019re safe, right?",
+            "It makes sense to you that only people who have casual sex get STIs.",
+            "It is a common belief that STIs are more common in those with a lot of sexual partners.",
+            "It seems to you that you don\u2019t need to worry about STIs if you\u2019re dating only one person."
+          ]
+        },
+        {
+          "conditions": [
+            [
+              "params.sense.reason",
+              "trust",
+              "=="
+            ]
+          ],
+          "text": [
+            "And trust is extremely important to have in a healthy relationship.",
+            "Trust is extremely important to have in a relationship.",
+            "Not using condoms is a sign of trust in your partner.",
+            "To you, asking to use condoms could suggest cheating."
+          ]
+        },
+        {
+          "conditions": [
+            [
+              "params.sense.reason",
+              "pregnancy",
+              "=="
+            ]
+          ],
+          "text": [
+            "Most individuals do rely on other forms of birth control to prevent pregnancy - it's easy to miss that they do not also protect you from STIs.",
+            "Most individuals do indeed rely on other forms of birth control to prevent pregnancy.",
+            "The first thing that comes to mind about condoms is how they reduce the chances of getting pregnant."
+          ]
+        },
+        {
+          "conditions": [
+            [
+              "params.sense.reason",
+              "tested-before",
+              "=="
+            ]
+          ],
+          "text": [
+            "Getting tested for STIs shows initiative on your part :) Indeed, a negative test result can create the sense that you're safe.",
+            "Getting tested shows initiative on your part! A negative test result can make you feel safe.",
+            "It seems obvious to you that if a test shows you don\u2019t have any infections, then you don\u2019t have any."
+          ]
+        },
+        {
+          "conditions": [
+            [
+              "params.sense.reason",
+              "obvious-symptoms",
+              "=="
+            ]
+          ],
+          "text": [
+            "Infections show symptoms - that's a logical assumption to make.",
+            "It seems obvious that if you had an infection, you would show symptoms and then you can get tested and avoid passing it on.",
+            "It makes more sense to you that you would only use condoms if you were showing symptoms of an infection.",
+            "You feel that you can be sure about whether you have an STI or not.",
+            "You believe that testing is only necessary if there are signs or symptoms that point to an infection."
+          ]
+        },
+        {
+          "conditions": [
+            [
+              "params.sense.reason",
+              "severity",
+              "=="
+            ]
+          ],
+          "text": [
+            "Most STIs indeed do not seem dangerous, and can probably be fixed by going to your GP - why worry?",
+            "Even if you did get an STI, you\u2019re quite sure that a visit to your GP or doctor will make it okay.",
+            "All STIs aren\u2019t dangerous or harmful so you feel that there\u2019s no need to worry.",
+            "Antibiotics or medication would cure the infection.",
+            "You don\u2019t think that the effects of an STI on health will be too bad."
+          ]
+        },
+        {
+          "conditions": [
+            [
+              "params.sense.reason",
+              "no-bad-history",
+              "=="
+            ]
+          ],
+          "text": [
+            "We rely on our past experiences to guide our beliefs and behaviours - this is completely normal.",
+            "You haven\u2019t gotten an STI so far in spite of your normal behaviours so why worry?",
+            "Not using condoms in the past has not resulted in anything to worry about",
+            "You have had sex without condoms before and you don\u2019t believe you got infected or anything",
+            "You or people you know have gone without condoms and there have been no bad outcomes related to STIs or infections"
+          ]
+        }
+      ],
+      "params.evoke.change.benefit.last-comment": [
+        {
+          "conditions": [
+            [
+              "params.evoke.change.benefit.last",
+              "prevention",
+              "=="
+            ]
+          ],
+          "text": [
+            "You feel vulnerable to catching something, like an STI, and this is something you would like to avoid.",
+            "You would feel more safe.",
+            "It could protect your health.",
+            "You could avoid negative consequences for your health.",
+            "There are less chances of catching something potentially serious.",
+            "It limits risks associated with STDs."
+          ]
+        },
+        {
+          "conditions": [
+            [
+              "params.evoke.change.benefit.last",
+              "prevention-pregnancy",
+              "=="
+            ]
+          ],
+          "text": [
+            "You think condoms are a good way to prevent pregnancy.",
+            "You feel that condoms will avoid the responsibilities that might come with accidentally making a baby."
+          ]
+        },
+        {
+          "conditions": [
+            [
+              "params.evoke.change.benefit.last",
+              "prevention-sti",
+              "=="
+            ]
+          ],
+          "text": [
+            "You think it could help you avoid an STI, and this is something that you want for yourself and your partner.",
+            "You could avoid STIs.",
+            "You would feel protected from infections.",
+            "You\u2019re not as likely to get infected from your partner.",
+            "Your partner won\u2019t pass on an STD to you.",
+            "It reduces the chances of getting an STI."
+          ]
+        },
+        {
+          "conditions": [
+            [
+              "params.evoke.change.benefit.last",
+              "fear",
+              "=="
+            ]
+          ],
+          "text": [
+            "You think it could reduce some kind of fear or anxiety when engaging in sexual activities, making you feel more at ease.",
+            "Anxiety wouldn\u2019t get in the way of you being intimate with your partner.",
+            "You wouldn\u2019t be as worried about your health.",
+            "You would be more relaxed or at ease when having sex with your partner."
+          ]
+        },
+        {
+          "conditions": [
+            [
+              "params.evoke.change.benefit.last",
+              "fear-pregnancy",
+              "=="
+            ]
+          ],
+          "text": [
+            "You feel like condoms would make you less anxious about pregnancy.",
+            "You feel that condoms will reduce the stress that might come with accidentally making a child."
+          ]
+        },
+        {
+          "conditions": [
+            [
+              "params.evoke.change.benefit.last",
+              "fear-sti",
+              "=="
+            ]
+          ],
+          "text": [
+            "You would feel less scared about getting STIs.",
+            "You\u2019d be less afraid of getting infected.",
+            "There would be less stress about STDs."
+          ]
+        }
+      ],
+      "params.evoke.change.downside.last-comment": [
+        {
+          "conditions": [
+            [
+              "params.evoke.change.downside.last",
+              "susceptibility",
+              "=="
+            ]
+          ],
+          "text": [
+            "You feel like you could catch something.",
+            "You\u2019re aware that STIs can result in some uncomfortable side effects.",
+            "It could be dangerous if you did get infected."
+          ]
+        },
+        {
+          "conditions": [
+            [
+              "params.evoke.change.downside.last",
+              "susceptibility-pregnancy",
+              "=="
+            ]
+          ],
+          "text": [
+            "You believe that not using condoms could result in a pregnancy that you might not want.",
+            "Without condoms, you believe the chances of accidentally making a child are higher."
+          ]
+        },
+        {
+          "conditions": [
+            [
+              "params.evoke.change.downside.last",
+              "susceptibility-sti",
+              "=="
+            ]
+          ],
+          "text": [
+            "You could get an STI.",
+            "You feel like there\u2019s a chance of getting infected.",
+            "It could be that you could pass on an STI.",
+            "You think that your partner (e.g. boyfriend or girlfriend) could infect you.",
+            "You might catch an STD."
+          ]
+        },
+        {
+          "conditions": [
+            [
+              "params.evoke.change.downside.last",
+              "fear",
+              "=="
+            ]
+          ],
+          "text": [
+            "Not using them could cause feelings of fear when you're getting intimate with your partner.",
+            "You might be anxious about getting infected while having sex with your SO."
+          ]
+        },
+        {
+          "conditions": [
+            [
+              "params.evoke.change.downside.last",
+              "fear-pregnancy",
+              "=="
+            ]
+          ],
+          "text": [
+            "You feel like not using condoms might increase your anxiety about pregnancy.",
+            "Going without condoms, you have concerns about accidentally making a baby."
+          ]
+        },
+        {
+          "conditions": [
+            [
+              "params.evoke.change.downside.last",
+              "fear-sti",
+              "=="
+            ]
+          ],
+          "text": [
+            "The thought of getting an infection worries you.",
+            "You would be scared that your partner might pass an STI onto you."
+          ]
+        }
+      ],
+      "params.evoke.change.downside.summary-comment": [
+        {
+          "conditions": [
+            [
+              "params.evoke.change.downside.list",
+              "susceptibility",
+              "in"
+            ]
+          ],
+          "text": [
+            "you feel like there may be some risks involved as a consequence"
+          ]
+        },
+        {
+          "conditions": [
+            [
+              "params.evoke.change.downside.list",
+              "susceptibility-pregnancy",
+              "in"
+            ]
+          ],
+          "text": [
+            "you think you could go through an unwanted pregnancy"
+          ]
+        },
+        {
+          "conditions": [
+            [
+              "params.evoke.change.downside.list",
+              "susceptibility-sti",
+              "in"
+            ]
+          ],
+          "text": [
+            "you might be at an increased risk of contracting an STI"
+          ]
+        },
+        {
+          "conditions": [
+            [
+              "params.evoke.change.downside.list",
+              "fear",
+              "in"
+            ]
+          ],
+          "text": [
+            "you have some concerns about the potential impact of STIs"
+          ]
+        },
+        {
+          "conditions": [
+            [
+              "params.evoke.change.downside.list",
+              "fear-pregnancy",
+              "in"
+            ]
+          ],
+          "text": [
+            "you might experience fear of an unintentional pregnancy"
+          ]
+        },
+        {
+          "conditions": [
+            [
+              "params.evoke.change.downside.list",
+              "fear-sti",
+              "in"
+            ]
+          ],
+          "text": [
+            "you have some concerns about the potential impact of STIs"
+          ]
+        }
+      ]
+    }
+  },
+  "dialogue_flows": [
+    {
+      "id": 3434,
+      "title": "introduction",
+      "description": "Welcome messages and consent.",
+      "conditions": [],
+      "states": [
+        {
+          "id": 3453,
+          "conditions": [],
+          "questions": [],
+          "intents": [],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [],
+              "text": [
+                "Hello! I'm MISH. My creators designed me to talk to you about your sexual health in partnership with the SOA AIDS Foundation in the Netherlands. As of now, I have only been programmed to talk about condom use but I hope I will be more knowledgeable in the future!",
+                "I'd like to remind you that you are free to withdraw from this interaction at any point and that your data will be treated in line with privacy regulations. That said, treat me like you would any social platform and be careful about revealing information that could be traced back to you."
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [],
+              "trigger": [
+                "state",
+                3455
+              ]
+            }
+          ],
+          "type": "monologue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 3455,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "Everything good so far?"
+              ]
+            }
+          ],
+          "intents": [
+            [
+              "yes_no",
+              "params.engage.everythingGood"
+            ]
+          ],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.engage.everythingGood",
+                  "yes",
+                  "=="
+                ]
+              ],
+              "text": [
+                "Great, thank you for your trust!"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.engage.everythingGood",
+                  "no",
+                  "=="
+                ]
+              ],
+              "text": [
+                "That's okay."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.engage.everythingGood",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "I'm sorry, I didn't get that. Could you rephrase what you just said?"
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.engage.everythingGood",
+                  "yes",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                3490
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.engage.everythingGood",
+                  "no",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                3456
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.engage.everythingGood",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                3455
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": ["gpt-3"],
+          "actions": []
+        },
+        {
+          "id": 3456,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "Just so that I have it correct - would you like to withdraw from this interaction?",
+                "I would like to be sure. Tell me, would you like to withdraw from this interaction?"
+              ]
+            }
+          ],
+          "intents": [
+            [
+              "yes_no",
+              "params.engage.withdraw"
+            ]
+          ],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.engage.withdraw",
+                  "yes",
+                  "=="
+                ]
+              ],
+              "text": [
+                "No problem! Please let the researcher know about your decision, and have a nice day! :)"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.engage.withdraw",
+                  "no",
+                  "=="
+                ]
+              ],
+              "text": [
+                "Okay! Perhaps you're feeling a bit hesitant about what I just proposed but you'd like to continue. Let's get started and see how you're feeling then!"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.engage.withdraw",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "I'm sorry, I didn't get that. Could you rephrase what you just said?"
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.engage.withdraw",
+                  "yes",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "flow",
+                9999
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.engage.withdraw",
+                  "no",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                3490
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.engage.withdraw",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                3456
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 3490,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "To keep track of your data, can I have the unique participant ID that was provided to you earlier?"
+              ]
+            }
+          ],
+          "intents": [],
+          "entities": [
+            [
+              "qualtrics_id",
+              "params.qualtrics.idStr"
+            ]
+          ],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.qualtrics.idStr",
+                  null,
+                  "!="
+                ]
+              ],
+              "text": [
+                "I think I got it."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.qualtrics.idStr",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "Sorry! I have to hear your ID before we can continue. It must be a number consists of 4 digits."
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.qualtrics.idStr",
+                  null,
+                  "!="
+                ]
+              ],
+              "trigger": [
+                "state",
+                3491
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.qualtrics.idStr",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                3490
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 3491,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "Is this correct {{ params.qualtrics.idStr }}?"
+              ]
+            }
+          ],
+          "intents": [
+            [
+              "yes_no",
+              "params.qualtrics.confirm"
+            ]
+          ],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.qualtrics.confirm",
+                  "yes",
+                  "=="
+                ]
+              ],
+              "text": [
+                "Great!"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.qualtrics.confirm",
+                  "no",
+                  "=="
+                ]
+              ],
+              "text": [
+                "Then please tell me again."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.qualtrics.confirm",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "I'm sorry, I didn't get that. Could you rephrase what you just said?"
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.qualtrics.confirm",
+                  "yes",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "flow",
+                5757
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.qualtrics.confirm",
+                  "no",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                3490
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.qualtrics.confirm",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                3491
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "id": 5757,
+      "title": "engage",
+      "description": "",
+      "conditions": [
+        [
+          "progress.flow.past",
+          3434,
+          "in"
+        ]
+      ],
+      "states": [
+        {
+          "id": 5723,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "What can I call you? Remember, if you're not comfortable giving me your real name, you can always type in a nickname."
+              ]
+            }
+          ],
+          "intents": [],
+          "entities": [
+            [
+              "name",
+              "name"
+            ]
+          ],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "name",
+                  null,
+                  "!="
+                ]
+              ],
+              "text": [
+                "Nice to meet you, {{ name }}!"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "name",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "I'm sorry, I didn't get that. Could you rephrase what you just said?"
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "name",
+                  null,
+                  "!="
+                ]
+              ],
+              "trigger": [
+                "state",
+                5724
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "name",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                5723
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 5724,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "How are you doing?"
+              ]
+            }
+          ],
+          "intents": [
+            [
+              "sentiment",
+              "params.howAreYou"
+            ]
+          ],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.howAreYou",
+                  "positive",
+                  "=="
+                ]
+              ],
+              "text": [
+                "Good to hear!"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.howAreYou",
+                  "negative",
+                  "=="
+                ]
+              ],
+              "text": [
+                "Sorry to hear that - I hope your day gets better!"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.howAreYou",
+                  "neutral",
+                  "=="
+                ]
+              ],
+              "text": [
+                "Thanks for sharing that with me."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.howAreYou",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "Thanks for sharing that with me."
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.howAreYou",
+                  "positive",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                5725
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.howAreYou",
+                  "negative",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                5725
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.howAreYou",
+                  "neutral",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                5725
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.howAreYou",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                5725
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 5725,
+          "conditions": [],
+          "questions": [],
+          "intents": [],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [],
+              "text": [
+                "How about we move onto today's goal? If you don't mind, I'd like to have three short conversations with you about the potential role that condom use may play in your sexual health.",
+                "First, I'd like to just get talking about condoms and sexual health, and perhaps introduce some ideas that you might find interesting. My goal is not to force you into changing your behaviours but to help you explore them. Ultimately, what you do is up to you, right?"
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [],
+              "trigger": [
+                "state",
+                5727
+              ]
+            }
+          ],
+          "type": "monologue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 5727,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "What do you say - would you be interested in talking to me further? :)"
+              ]
+            }
+          ],
+          "intents": [
+            [
+              "yes_no",
+              "params.engage.continue"
+            ]
+          ],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.engage.continue",
+                  "yes",
+                  "=="
+                ]
+              ],
+              "text": [
+                "Great! I'll be back in a few minutes with my material, and then we can get right into it. See you then :)"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.engage.continue",
+                  "no",
+                  "=="
+                ]
+              ],
+              "text": [
+                "Alright! It's okay if you don't want to continue with this interaction. Please let the researcher know about your decision, and have a nice day! :)"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.engage.continue",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "I'm sorry, I didn't get that. Could you rephrase what you just said?"
+              ]
+            }
+          ],
+          "actions": [
+            [
+              "set_on_hold_time",
+              "progress.onhold.start",
+              "post"
+            ],
+            [
+              "set_on_hold_true",
+              "progress.onhold.is",
+              "post"
+            ]
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.engage.continue",
+                  "yes",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "flow",
+                10000
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.engage.continue",
+                  "no",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "flow",
+                9999
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.engage.continue",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                5727
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": []
+        }
+      ]
+    },
+    {
+      "id": 4646,
+      "title": "focus consent",
+      "description": "Focus flow consent messages",
+      "conditions": [],
+      "states": [
+        {
+          "id": 4610,
+          "conditions": [],
+          "questions": [],
+          "responses": [
+            {
+              "conditions": [],
+              "text": [
+                "I appreciate that you agreed to continue having this conversation with me.",
+                "I'd like to remind you that while sexual health can be a sensitive topic for some people",
+                "I've been programmed to listen without judgment and I hope you'll feel comfortable talking to me!"
+              ]
+            }
+          ],
+          "intents": [],
+          "entities": [],
+          "triggers": [
+            {
+              "conditions": [],
+              "trigger": [
+                "state",
+                4612
+              ]
+            }
+          ],
+          "type": "monologue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 4612,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "How does that sound?"
+              ]
+            }
+          ],
+          "intents": [
+            [
+              "yes_no",
+              "params.focus.consent"
+            ]
+          ],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.focus.consent",
+                  "yes",
+                  "=="
+                ]
+              ],
+              "text": [
+                "I'm glad to hear it! Let's move along."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.consent",
+                  "no",
+                  "=="
+                ]
+              ],
+              "text": [
+                "If you don't feel comfortable, we can end the conversation here for the day. You can return if you'd like to :)"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.consent",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "I'm sorry, I didn't get that. Could you rephrase what you just said?"
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.focus.consent",
+                  "yes",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "flow",
+                1212
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.consent",
+                  "no",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                4613
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.consent",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                4612
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 4613,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "Shall we do that?"
+              ]
+            }
+          ],
+          "intents": [
+            [
+              "yes_no",
+              "params.focus.talkLater"
+            ]
+          ],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.focus.talkLater",
+                  "yes",
+                  "=="
+                ]
+              ],
+              "text": [
+                "No problem! Please inform the researcher of your decision."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.talkLater",
+                  "no",
+                  "=="
+                ]
+              ],
+              "text": [
+                "Okay! From what I understand, you might feel uncomfortable at times but you would still like to continue talking to me. Let's give it a shot :)"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.talkLater",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "I'm sorry, I didn't get that. Could you rephrase what you just said?"
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.focus.talkLater",
+                  "yes",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "flow",
+                9999
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.talkLater",
+                  "no",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "flow",
+                1212
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.talkLater",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                4613
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "id": 1212,
+      "title": "focus condom usage",
+      "description": "Focus flow condom usage question",
+      "conditions": [],
+      "states": [
+        {
+          "id": 1253,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "First off, I would like to ask you about how you approach sex in the beginning of a relationship. You've decided to go steady, but it's still early. At this stage, how often do you use condoms with your partner?"
+              ]
+            }
+          ],
+          "intents": [
+            [
+              "approximate_frequency",
+              "params.condom.frequency"
+            ]
+          ],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.condom.frequency",
+                  "not-at-all",
+                  "=="
+                ]
+              ],
+              "text": [
+                "The decision to incorporate condoms into your sex life is complicated."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.condom.frequency",
+                  "sometimes",
+                  "=="
+                ]
+              ],
+              "text": [
+                "Using condoms sometimes suggests you might have passing concerns about your sexual health, but there are other factors that influence your decision to use them."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.condom.frequency",
+                  "mostly",
+                  "=="
+                ]
+              ],
+              "text": [
+                "You using condoms quite often tells me you might want to take responsibility for your sexual health. Perhaps sometimes, the decision to use them is not as simple.."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.condom.frequency",
+                  "always",
+                  "=="
+                ]
+              ],
+              "text": [
+                "You take responsibility for your sexual health, and see condoms as one way to do that."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.condom.frequency",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "I'm sorry, I didn't get that. Could you rephrase what you just said?"
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.condom.frequency",
+                  "not-at-all",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1254
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.condom.frequency",
+                  "sometimes",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1254
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.condom.frequency",
+                  "mostly",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1254
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.condom.frequency",
+                  "always",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1254
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.condom.frequency",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1253
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 1254,
+          "conditions": [],
+          "questions": [],
+          "responses": [
+            {
+              "conditions": [],
+              "text": [
+                "I wonder what you already know about condoms and sexually transmitted infections (STIs) already. Let's play a quick game to find out! ",
+                "I'm going to ask you three questions and we'll see how many you get right. If it's a true/false question, type 'True' and 'False' to respond. If it's a multiple choice question, use the corresponding letter to respond."
+              ]
+            }
+          ],
+          "intents": [],
+          "entities": [],
+          "triggers": [
+            {
+              "conditions": [],
+              "trigger": [
+                "state",
+                1256
+              ]
+            }
+          ],
+          "type": "monologue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 1256,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "Ready?"
+              ]
+            }
+          ],
+          "intents": [
+            [
+              "yes_no",
+              "params.focus.multipleChoice.ready"
+            ]
+          ],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.ready",
+                  "yes",
+                  "=="
+                ]
+              ],
+              "text": [
+                "Question 1!"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.ready",
+                  "no",
+                  "=="
+                ]
+              ],
+              "text": [
+                "Alright, let's pause for a minute while I check in with you."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.ready",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "I'm sorry, I didn't get that. Could you rephrase what you just said?"
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.ready",
+                  "yes",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "flow",
+                1313
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.ready",
+                  "no",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1257
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.ready",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1256
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 1257,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "Would you like to play the game?"
+              ]
+            }
+          ],
+          "intents": [
+            [
+              "yes_no",
+              "params.focus.multipleChoice.readyToPlay"
+            ]
+          ],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.readyToPlay",
+                  "yes",
+                  "=="
+                ]
+              ],
+              "text": [
+                "Okay, great! Let's begin :) Question 1!"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.readyToPlay",
+                  "no",
+                  "=="
+                ]
+              ],
+              "text": [
+                "No problem! Please inform the researcher of your decision."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.readyToPlay",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "I'm sorry, I didn't get that. Could you rephrase what you just said?"
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.readyToPlay",
+                  "yes",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "flow",
+                1313
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.readyToPlay",
+                  "no",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "flow",
+                9999
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.readyToPlay",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1257
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "id": 1313,
+      "title": "focus multiple choice",
+      "description": "Focus flow multiple choice question",
+      "conditions": [],
+      "states": [
+        {
+          "id": 1370,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "True or False? Unless you have a lot of sexual partners, you don't need to use condoms."
+              ]
+            }
+          ],
+          "intents": [
+            [
+              "true_false",
+              "params.focus.multipleChoice.one"
+            ]
+          ],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.one",
+                  "true",
+                  "=="
+                ]
+              ],
+              "text": [
+                "Nice try! \n It also pays to use condoms even when you first become exclusive with your sexual partner because they might have an STI."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.one",
+                  "false",
+                  "=="
+                ]
+              ],
+              "text": [
+                "Correct!"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.one",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "I'm sorry, I didn't get that. Could you rephrase what you just said?"
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.one",
+                  "true",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1371
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.one",
+                  "false",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1371
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.one",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1370
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 1371,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "Onto question 2! \n Which of the following prevents pregnancy AND STIs? \n A ) Birth control pill, \n B ) Intra-uterine device, \n C ) Condoms or \n D ) Birth control implant?"
+              ]
+            }
+          ],
+          "intents": [],
+          "entities": [],
+          "multipleChoice": [
+            "a,b,c,d",
+            "params.focus.multipleChoice.two"
+          ],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.two",
+                  "a",
+                  "=="
+                ]
+              ],
+              "text": [
+                "Nice try!"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.two",
+                  "b",
+                  "=="
+                ]
+              ],
+              "text": [
+                "Nice try!"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.two",
+                  "c",
+                  "=="
+                ]
+              ],
+              "text": [
+                "Correct!"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.two",
+                  "d",
+                  "=="
+                ]
+              ],
+              "text": [
+                "Nice try!"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.two",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "Sorry, I couldn't catch that. Try again, and make sure you use one of the four letters to indicate your answer!"
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.two",
+                  "a",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1372
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.two",
+                  "b",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1372
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.two",
+                  "c",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1373
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.two",
+                  "d",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1372
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.two",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1371
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 1372,
+          "conditions": [],
+          "questions": [],
+          "responses": [
+            {
+              "conditions": [],
+              "text": [
+                "Condoms are unique because they're the only form of birth control that also prevents STIs. The others, however, are highly effective for preventing only pregnancy."
+              ]
+            }
+          ],
+          "intents": [],
+          "entities": [],
+          "triggers": [
+            {
+              "conditions": [],
+              "trigger": [
+                "state",
+                1373
+              ]
+            }
+          ],
+          "type": "monologue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 1373,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "Finally, question 3! True or False? If someone you were dating had an STI, you would be able to tell."
+              ]
+            }
+          ],
+          "intents": [
+            [
+              "true_false",
+              "params.focus.multipleChoice.three"
+            ]
+          ],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.three",
+                  "true",
+                  "=="
+                ]
+              ],
+              "text": [
+                "Nice try! \nSome STIs have symptoms but others are 'silent'. They can take time to show up, even with an STI test."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.three",
+                  "false",
+                  "=="
+                ]
+              ],
+              "text": [
+                "Correct!"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.three",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "Sorry, I couldn't catch that. Remember to answer with True or False!"
+              ]
+            }
+          ],
+          "actions": [
+            [
+              "count_focus_correct",
+              "params.focus.multipleChoice.correctCount",
+              "post"
+            ]
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.three",
+                  "true",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "flow",
+                1414
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.three",
+                  "false",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "flow",
+                1414
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.three",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1373
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": []
+        }
+      ]
+    },
+    {
+      "id": 1414,
+      "title": "focus",
+      "description": "Focus flow",
+      "conditions": [],
+      "states": [
+        {
+          "id": 1447,
+          "conditions": [],
+          "questions": [],
+          "intents": [],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.correctCount",
+                  3,
+                  "=="
+                ]
+              ],
+              "text": [
+                "You are already aware about the role condoms play in sexual health - understanding their importance is a great first step!"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.correctCount",
+                  2,
+                  "=="
+                ]
+              ],
+              "text": [
+                "Sexual health can be complicated but you have already made yourself aware of some aspects - this is already a good first step."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.correctCount",
+                  2,
+                  "<"
+                ]
+              ],
+              "text": [
+                "Sexual health can be complicated but I'm glad that you're participating in this conversation with me."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.correctCount",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "Something went wrong with my calculations. Let me ask you the questions again."
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.correctCount",
+                  null,
+                  "!="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1448
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.multipleChoice.correctCount",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "flow",
+                1313
+              ]
+            }
+          ],
+          "type": "monologue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 1448,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "As I mentioned earlier, our partner, the SOA AIDS Foundation in the Netherlands, is dedicated to ensuring your sexual health. I've got some information from them that might interest you - can I share it with you?"
+              ]
+            }
+          ],
+          "intents": [
+            [
+              "yes_no",
+              "params.focus.soaaidsInfo.consent"
+            ]
+          ],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.focus.soaaidsInfo.consent",
+                  "yes",
+                  "=="
+                ]
+              ],
+              "text": [
+                "The foundation recommends that in a new sexual relationship, you can protect yourself by getting tested for STIs before engaging in penetrative sex, using condoms for about 3 months and then get tested again to be sure that neither you nor your partner has an STI. Remember, this tip is for those who have decided to go steady with their sexual partners."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.soaaidsInfo.consent",
+                  "no",
+                  "=="
+                ]
+              ],
+              "text": [
+                "Okay, that's alright. If you are interested later, you can always look up sexual health information on their main website (https://www.soaaids.nl/en) or on the website dedicated for young people like you (https://sense.info/nl)."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.soaaidsInfo.consent",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "I'm sorry, I didn't get that. Could you rephrase what you just said?"
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.focus.soaaidsInfo.consent",
+                  "yes",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1450
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.soaaidsInfo.consent",
+                  "no",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "flow",
+                6565
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.soaaidsInfo.consent",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1448
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 1450,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "To what extent does this recommendation make sense to you? Give me a number from 1 to 10, where 10 means that it makes complete sense."
+              ]
+            }
+          ],
+          "intents": [],
+          "entities": [
+            [
+              "numbers",
+              "params.sense.number"
+            ]
+          ],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.sense.number",
+                  7,
+                  "<"
+                ],
+                [
+                  "params.sense.number",
+                  0,
+                  ">"
+                ]
+              ],
+              "text": [
+                "Alright, so you gave it a {{ params.sense.number }}."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.number",
+                  7,
+                  ">="
+                ],
+                [
+                  "params.sense.number",
+                  10,
+                  "<="
+                ]
+              ],
+              "text": [
+                "Alright, so you gave it a {{ params.sense.number }}."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.number",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "I'm sorry I didn't get that. Try again? Give me a number!"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.number",
+                  10,
+                  ">"
+                ]
+              ],
+              "text": [
+                "I'm sorry but you need to give me a number between 1 and 10! Try again?"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.number",
+                  0,
+                  "=="
+                ]
+              ],
+              "text": [
+                "I'm sorry but you need to give me a number between 1 and 10! Try again?"
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.sense.number",
+                  7,
+                  "<"
+                ],
+                [
+                  "params.sense.number",
+                  0,
+                  ">"
+                ]
+              ],
+              "trigger": [
+                "state",
+                1451
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.number",
+                  7,
+                  ">="
+                ],
+                [
+                  "params.sense.number",
+                  10,
+                  "<="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1452
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.number",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1450
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.number",
+                  10,
+                  ">"
+                ]
+              ],
+              "trigger": [
+                "state",
+                1450
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.number",
+                  0,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1450
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 1452,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "What led you to choose that number?"
+              ]
+            }
+          ],
+          "intents": [],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [],
+              "text": [
+                "Thanks! I appreciate that you're willing to share the reasons for your thoughts with me."
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [],
+              "trigger": [
+                "flow",
+                6565
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 1451,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "What led you to choose that number?"
+              ]
+            }
+          ],
+          "intents": [
+            [
+              "sense_reason",
+              "params.sense.reason"
+            ]
+          ],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.sense.reason",
+                  null,
+                  "!="
+                ]
+              ],
+              "text": [
+                "{{ params.sense.reason-reflection }}"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.reason",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "I'm sorry, I couldn't quite catch that."
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.sense.reason",
+                  null,
+                  "!="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1486
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.reason",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1498
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 1486,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "Does that sound right? Did I understand you correctly?"
+              ]
+            }
+          ],
+          "intents": [
+            [
+              "yes_no",
+              "params.sense.reasonCheck"
+            ]
+          ],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.sense.reasonCheck",
+                  "yes",
+                  "=="
+                ]
+              ],
+              "text": [
+                ""
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.reasonCheck",
+                  "no",
+                  "=="
+                ]
+              ],
+              "text": [
+                "Oh, I'm sorry! I'm still learning. Let's try again. You gave me a {{ params.sense.number }} when I asked you how much the SOA AIDS recommendation made sense to you."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.reasonCheck",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "I'm sorry, I couldn't quite catch that. Could you rephrase?"
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.sense.reasonCheck",
+                  "yes",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1453
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.reasonCheck",
+                  "no",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1498
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.reasonCheck",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1486
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 1498,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "Maybe you could help me understand you better. Which one of these captures what you had in mind?\n A ) Me and/or my partner hasn't had sex before\n B ) My partner and I are only seeing each other, and no one else\n C ) You and your partner trust each other, removing the need for condoms\n D ) You think condoms are for avoiding pregnancy\n E ) You might have gotten an STI test done in the past\n F ) STIs have symptoms and if they are there, you see why a test might be necessary\n G ) You see STIs as regular infections that aren't too bad\n H ) Not having used condoms in the past, you have not faced any particularly bad consequences"
+              ]
+            }
+          ],
+          "intents": [],
+          "entities": [],
+          "multipleChoice": [
+            "a,b,c,d,e,f,g,h",
+            "virgin,monogamy,trust,pregnancy,tested-before,obvious-symptoms,severity,no-bad-history",
+            "params.sense.reason"
+          ],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.sense.reason",
+                  null,
+                  "!="
+                ]
+              ],
+              "text": [
+                "{{ params.sense.reason-reflection }}"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.reason",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "I'm sorry, I couldn't quite catch that. Can you try rephrasing?"
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.sense.reason",
+                  null,
+                  "!="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1453
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.reason",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1451
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 1453,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "Thanks! I appreciate that you're willing to share the reasons for your thoughts with me. Would it be okay if I followed up what you just said?"
+              ]
+            }
+          ],
+          "intents": [
+            [
+              "yes_no",
+              "params.sense.followUp"
+            ]
+          ],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.sense.followUp",
+                  "yes",
+                  "=="
+                ],
+                [
+                  "params.sense.reason",
+                  "virgin",
+                  "=="
+                ]
+              ],
+              "text": [
+                "It is actually possible to get a sexually transmitted infection if you have not had penetrative sex. STIs can be passed on through bodily fluids such as semen as well as mouth- and skin-to-skin contact."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.followUp",
+                  "yes",
+                  "=="
+                ],
+                [
+                  "params.sense.reason",
+                  "monogamy",
+                  "=="
+                ]
+              ],
+              "text": [
+                "If you and your partner have had sexual contact before your current relationship, it is possible that one of you could have gotten a sexually transmitted infection earlier."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.followUp",
+                  "yes",
+                  "=="
+                ],
+                [
+                  "params.sense.reason",
+                  "trust",
+                  "=="
+                ]
+              ],
+              "text": [
+                "However, if you and your partner have had sexual contact before your current relationship, it is possible that one of you could have gotten a sexually transmitted infection earlier outside of your current relationship."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.followUp",
+                  "yes",
+                  "=="
+                ],
+                [
+                  "params.sense.reason",
+                  "pregnancy",
+                  "=="
+                ]
+              ],
+              "text": [
+                "As we talked about earlier, condoms are the best way to ensure protection against pregnancy AND infections. That said, it can be relatively safe to switch to the other forms of birth control if you follow the recommendation offered by SOA AIDS Foundation."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.followUp",
+                  "yes",
+                  "=="
+                ],
+                [
+                  "params.sense.reason",
+                  "tested-before",
+                  "=="
+                ]
+              ],
+              "text": [
+                "A negative test result only confirms that you do not have a sexually transmitted infection that can be detected at that time. It is possible that another test performed later may return positive."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.followUp",
+                  "yes",
+                  "=="
+                ],
+                [
+                  "params.sense.reason",
+                  "obvious-symptoms",
+                  "=="
+                ]
+              ],
+              "text": [
+                "You could have a sexually transmitted infection without any obvious symptoms as of yet - they can be \"silent\"."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.followUp",
+                  "yes",
+                  "=="
+                ],
+                [
+                  "params.sense.reason",
+                  "severity",
+                  "=="
+                ]
+              ],
+              "text": [
+                "As STIs can go undetected, it is possible that it will not get treated until much later and this can have an effect on different aspects of your health. While most STIs can be addressed easily, HIV is an example of an STI whose consequences can be more long-lasting."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.followUp",
+                  "yes",
+                  "=="
+                ],
+                [
+                  "params.sense.reason",
+                  "no-bad-history",
+                  "=="
+                ]
+              ],
+              "text": [
+                ""
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.followUp",
+                  "yes",
+                  "=="
+                ],
+                [
+                  "params.sense.reason",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "I'm sorry. I forgot something. Let me ask you again."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.followUp",
+                  "no",
+                  "=="
+                ]
+              ],
+              "text": [
+                "No problem! You're more than capable of finding out more information by yourself."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.followUp",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "I'm sorry, I didn't get that. Could you rephrase what you just said?"
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.sense.followUp",
+                  "yes",
+                  "=="
+                ],
+                [
+                  "params.sense.reason",
+                  "virgin",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1454
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.followUp",
+                  "yes",
+                  "=="
+                ],
+                [
+                  "params.sense.reason",
+                  "monogamy",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1454
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.followUp",
+                  "yes",
+                  "=="
+                ],
+                [
+                  "params.sense.reason",
+                  "trust",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1454
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.followUp",
+                  "yes",
+                  "=="
+                ],
+                [
+                  "params.sense.reason",
+                  "pregnancy",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1454
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.followUp",
+                  "yes",
+                  "=="
+                ],
+                [
+                  "params.sense.reason",
+                  "tested-before",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1454
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.followUp",
+                  "yes",
+                  "=="
+                ],
+                [
+                  "params.sense.reason",
+                  "obvious-symptoms",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1454
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.followUp",
+                  "yes",
+                  "=="
+                ],
+                [
+                  "params.sense.reason",
+                  "severity",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1454
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.followUp",
+                  "yes",
+                  "=="
+                ],
+                [
+                  "params.sense.reason",
+                  "no-bad-history",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1454
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.followUp",
+                  "yes",
+                  "=="
+                ],
+                [
+                  "params.sense.reason",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1451
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.followUp",
+                  "no",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "flow",
+                6565
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.followUp",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1453
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 1454,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "Did you find this useful? Give me a number from 1 to 10, where 10 means it was very useful."
+              ]
+            }
+          ],
+          "intents": [],
+          "entities": [
+            [
+              "numbers",
+              "params.sense.use"
+            ]
+          ],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.sense.use",
+                  6,
+                  "<"
+                ],
+                [
+                  "params.sense.use",
+                  0,
+                  ">"
+                ]
+              ],
+              "text": [
+                "That's okay, I'm not here to force you to change your mind - it's up to you, of course!"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.use",
+                  6,
+                  ">="
+                ],
+                [
+                  "params.sense.use",
+                  10,
+                  "<="
+                ]
+              ],
+              "text": [
+                "It's good to hear that you're receiving this information positively"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.use",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "Whoops, I didn't get that. Could you try again? Give me a number!"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.number",
+                  10,
+                  ">"
+                ]
+              ],
+              "text": [
+                "I'm sorry but you need to give me a number between 1 and 10! Try again?"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.number",
+                  0,
+                  "=="
+                ]
+              ],
+              "text": [
+                "I'm sorry but you need to give me a number between 1 and 10! Try again?"
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.sense.use",
+                  6,
+                  "<"
+                ],
+                [
+                  "params.sense.use",
+                  0,
+                  ">"
+                ]
+              ],
+              "trigger": [
+                "state",
+                1455
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.use",
+                  6,
+                  ">="
+                ],
+                [
+                  "params.sense.use",
+                  10,
+                  "<="
+                ]
+              ],
+              "trigger": [
+                "flow",
+                6565
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.use",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1454
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.number",
+                  10,
+                  ">"
+                ]
+              ],
+              "trigger": [
+                "state",
+                1454
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.number",
+                  0,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                1454
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 1455,
+          "conditions": [],
+          "questions": [],
+          "intents": [],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [],
+              "text": [
+                "If I didn't give you the information you were looking for, feel free to explore the website yourself at www.sense.info"
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [],
+              "trigger": [
+                "flow",
+                6565
+              ]
+            }
+          ],
+          "type": "monologue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "id": 6565,
+      "title": "focus-summary",
+      "description": "Summary part of the focus flow",
+      "conditions": [],
+      "states": [
+        {
+          "id": 6511,
+          "conditions": [],
+          "questions": [],
+          "intents": [],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [],
+              "text": [
+                "We have discussed quite a lot in this session so I'd like to go over that quickly.",
+                "You usually use condoms {{ params.condom.frequency }} with your sexual partner.",
+                "The recommendation to use condoms in between periods of STI testing early on in the relationship seemed to make {{ params.sense.number-comment }} to you - you gave it a {{ params.sense.number }}."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.reason",
+                  null,
+                  "!="
+                ]
+              ],
+              "text": [
+                "You informed me that you hold this belief because {{ params.sense.reason-comment }}."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.number",
+                  6,
+                  "<="
+                ],
+                [
+                  "params.sense.use",
+                  5,
+                  "<="
+                ]
+              ],
+              "text": [
+                "We discussed the nuances of this reason, and you found that the recommendation still does not really feel right to you.",
+                "It can be difficult to see how this applies to you, and it is entirely up to you. I'm glad that I got to discuss this topic with you, even if it was a short conversation.",
+                "If you wouldn't mind continuing to talk to me, I was thinking that we could explore some of the reasons you might find for implementing condom use in the early stage of your sexual relationship - this can help you make up your mind about condom use and the role it can play for you."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.number",
+                  6,
+                  "<="
+                ],
+                [
+                  "params.sense.use",
+                  6,
+                  ">="
+                ]
+              ],
+              "text": [
+                "We discussed the nuances of this reason, and you found that the recommendation may make more sense than you thought before.",
+                "It's good that we were able to reach common ground on why condoms have a role to play in preventing STIs. Despite this being a short conversation, I'm glad I got to discuss this topic with you!",
+                "In the next conversation, I was thinking that we could explore some of the reasons you might have for implementing condom use in the early stage of your sexual relationship - this can help you make up your mind about condom use and role it plays for you."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.number",
+                  7,
+                  ">="
+                ]
+              ],
+              "text": [
+                "You also told me about why you think this way, which convinced me that you have a good understanding of how condoms can be beneficial.",
+                "It's good that we were able to reach common ground on why condoms have a role to play in preventing STIs. Despite this being a short conversation, I'm glad I got to discuss this topic with you!",
+                "In the next conversation, I was thinking that we could explore some of the reasons you might have for implementing condom use in the early stage of your sexual relationship - this can help you make up your mind about condom use and role it plays for you."
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [],
+              "trigger": [
+                "state",
+                6517
+              ]
+            }
+          ],
+          "type": "monologue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 6517,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "Would you be up for that?"
+              ]
+            }
+          ],
+          "intents": [
+            [
+              "yes_no",
+              "params.focus.continue"
+            ]
+          ],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.focus.continue",
+                  "yes",
+                  "=="
+                ]
+              ],
+              "text": [
+                "I\u2019m glad to hear it. Give me a few minutes so I can compile my notes. See you soon!"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.continue",
+                  "no",
+                  "=="
+                ]
+              ],
+              "text": [
+                "I understand and it\u2019s of course up to you. You may see that condom use has certain advantages but don\u2019t fully agree that they will benefit you in your situation. I hope I have given you some food for thought. If you\u2019d ever like to talk to me again about condom use, do reach out. Until then, goodbye and I hope to see you again soon!"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.continue",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "I'm sorry, I didn't get that. Could you rephrase what you just said?"
+              ]
+            }
+          ],
+          "actions": [
+            [
+              "set_on_hold_time",
+              "progress.onhold.start",
+              "post"
+            ],
+            [
+              "set_on_hold_true",
+              "progress.onhold.is",
+              "post"
+            ]
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.focus.continue",
+                  "yes",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "flow",
+                10000
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.continue",
+                  "no",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "flow",
+                9999
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.focus.continue",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                6517
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": []
+        }
+      ]
+    },
+    {
+      "id": 7777,
+      "title": "evoke-consent",
+      "description": "Consent section of evoke mega-flow",
+      "conditions": [],
+      "states": [
+        {
+          "id": 7720,
+          "conditions": [],
+          "questions": [],
+          "intents": [],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [],
+              "text": [
+                "{{ name }}, right? I hope you found our last conversation insightful.",
+                "We talked about how condoms can help prevent STIs and you might be beginning to think about what comes next. This is something I'd like to explore a bit.",
+                "I thought we could do a short thinking exercise. My hope is that it can be an interesting way to explore the reasons you choose to do, or not do, something."
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [],
+              "trigger": [
+                "state",
+                7723
+              ]
+            }
+          ],
+          "type": "monologue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 7723,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "Are you up for it?"
+              ]
+            }
+          ],
+          "intents": [
+            [
+              "yes_no",
+              "params.evoke.upForIt"
+            ]
+          ],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.evoke.upForIt",
+                  "yes",
+                  "=="
+                ]
+              ],
+              "text": [
+                "Great, let's get started."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.upForIt",
+                  "no",
+                  "=="
+                ]
+              ],
+              "text": [
+                "That's okay."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.upForIt",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "I'm sorry, I didn't get that. Could you rephrase what you just said?"
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.evoke.upForIt",
+                  "yes",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "flow",
+                4242
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.upForIt",
+                  "no",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                7724
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.upForIt",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                7723
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 7724,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "Just so that I have it correct - would you like to withdraw from this interaction?"
+              ]
+            }
+          ],
+          "intents": [
+            [
+              "yes_no",
+              "params.evoke.withdraw"
+            ]
+          ],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.evoke.withdraw",
+                  "yes",
+                  "=="
+                ]
+              ],
+              "text": [
+                "No problem! Please let the researcher know about your decision."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.withdraw",
+                  "no",
+                  "=="
+                ]
+              ],
+              "text": [
+                "Okay! Perhaps you're feeling a bit hesitant about what I just proposed but you'd like to continue. Let's get started and see how you're feeling then!"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.withdraw",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "I'm sorry, I didn't get that. Could you rephrase what you just said?"
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.evoke.withdraw",
+                  "yes",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "flow",
+                9999
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.withdraw",
+                  "no",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "flow",
+                4242
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.withdraw",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                7724
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "id": 4242,
+      "title": "evoke-change",
+      "description": "Section of evoke flow with questions on change.",
+      "conditions": [],
+      "states": [
+        {
+          "id": 4270,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [
+                [
+                  "params.evoke.change.benefit.count",
+                  0,
+                  "=="
+                ]
+              ],
+              "text": [
+                "My question to you is, can you think of how using condoms in the beginning of a new exclusive sexual relationship could benefit you and your partner?"
+              ]
+            }
+          ],
+          "intents": [
+            [
+              "change_benefit",
+              "params.evoke.change.benefit.last"
+            ],
+            [
+              "dont_know",
+              "params.evoke.change.benefit.dontKnow"
+            ]
+          ],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.evoke.change.benefit.count",
+                  3,
+                  "=="
+                ]
+              ],
+              "text": [
+                "{{ params.evoke.change.benefit.last-comment }} Now let me ask you this."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.change.benefit.count",
+                  0,
+                  ">"
+                ],
+                [
+                  "params.evoke.change.benefit.count",
+                  3,
+                  "<"
+                ],
+                [
+                  "params.evoke.change.benefit.dontKnow",
+                  true,
+                  "=="
+                ]
+              ],
+              "text": [
+                "That's alright. Now let me ask you this."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.change.benefit.count",
+                  0,
+                  "=="
+                ],
+                [
+                  "params.evoke.change.benefit.dontKnow",
+                  true,
+                  "=="
+                ]
+              ],
+              "text": [
+                "That\u2019s alright!"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.change.benefit.count",
+                  0,
+                  ">"
+                ],
+                [
+                  "params.evoke.change.benefit.count",
+                  3,
+                  "<"
+                ],
+                [
+                  "params.evoke.change.benefit.last",
+                  null,
+                  "!="
+                ],
+                [
+                  "params.evoke.change.benefit.dontKnow",
+                  false,
+                  "=="
+                ]
+              ],
+              "text": [
+                "{{ params.evoke.change.benefit.last-comment }} Anything else?",
+                "{{ params.evoke.change.benefit.last-comment }} What else?"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.change.benefit.last",
+                  null,
+                  "=="
+                ],
+                [
+                  "params.evoke.change.benefit.dontKnow",
+                  false,
+                  "=="
+                ]
+              ],
+              "text": [
+                "I'm sorry I didn't quite understand you. Could you try rephrasing that?"
+              ]
+            }
+          ],
+          "actions": [
+            [
+              "append_change_benefit",
+              "params.evoke.change.benefit.list",
+              "repeat"
+            ],
+            [
+              "count_change_benefit",
+              "params.evoke.change.benefit.count",
+              "repeat"
+            ]
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.evoke.change.benefit.count",
+                  3,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                4272
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.change.benefit.count",
+                  0,
+                  ">"
+                ],
+                [
+                  "params.evoke.change.benefit.count",
+                  3,
+                  "<"
+                ],
+                [
+                  "params.evoke.change.benefit.dontKnow",
+                  true,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                4272
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.change.benefit.count",
+                  0,
+                  "=="
+                ],
+                [
+                  "params.evoke.change.benefit.dontKnow",
+                  true,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                4271
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.change.benefit.count",
+                  0,
+                  ">"
+                ],
+                [
+                  "params.evoke.change.benefit.count",
+                  3,
+                  "<"
+                ],
+                [
+                  "params.evoke.change.benefit.last",
+                  null,
+                  "!="
+                ],
+                [
+                  "params.evoke.change.benefit.dontKnow",
+                  false,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                4270
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.change.benefit.last",
+                  null,
+                  "=="
+                ],
+                [
+                  "params.evoke.change.benefit.dontKnow",
+                  false,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                4270
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": []
+        },
+        {
+          "id": 4271,
+          "conditions": [],
+          "questions": [],
+          "intents": [],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [],
+              "text": [
+                "Why don\u2019t we take a look from a different perspective?",
+                "We could try looking at it from a different perspective."
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [],
+              "trigger": [
+                "state",
+                4272
+              ]
+            }
+          ],
+          "type": "monologue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 4272,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "What could be a downside of not using condoms when in a new but steady relationship?"
+              ]
+            }
+          ],
+          "intents": [
+            [
+              "change_downside",
+              "params.evoke.change.downside.last"
+            ],
+            [
+              "dont_know",
+              "params.evoke.change.downside.dontKnow"
+            ]
+          ],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.evoke.change.downside.count",
+                  3,
+                  "=="
+                ]
+              ],
+              "text": [
+                "{{ params.evoke.change.downside.last-comment }}"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.change.downside.count",
+                  0,
+                  ">"
+                ],
+                [
+                  "params.evoke.change.downside.count",
+                  3,
+                  "<"
+                ],
+                [
+                  "params.evoke.change.downside.dontKnow",
+                  true,
+                  "=="
+                ]
+              ],
+              "text": [
+                "Alright."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.change.downside.count",
+                  0,
+                  "=="
+                ],
+                [
+                  "params.evoke.change.downside.dontKnow",
+                  true,
+                  "=="
+                ]
+              ],
+              "text": [
+                "Alright."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.change.downside.count",
+                  0,
+                  ">"
+                ],
+                [
+                  "params.evoke.change.downside.count",
+                  3,
+                  "<"
+                ],
+                [
+                  "params.evoke.change.downside.last",
+                  null,
+                  "!="
+                ],
+                [
+                  "params.evoke.change.downside.dontKnow",
+                  false,
+                  "=="
+                ]
+              ],
+              "text": [
+                "{{ params.evoke.change.downside.last-comment }} Anything else?",
+                "{{ params.evoke.change.downside.last-comment }} What else?"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.change.downside.last",
+                  null,
+                  "=="
+                ],
+                [
+                  "params.evoke.change.downside.dontKnow",
+                  false,
+                  "=="
+                ]
+              ],
+              "text": [
+                "I'm sorry I didn't quite understand you. Could you try rephrasing that?"
+              ]
+            }
+          ],
+          "actions": [
+            [
+              "append_change_downside",
+              "params.evoke.change.downside.list",
+              "repeat"
+            ],
+            [
+              "count_change_downside",
+              "params.evoke.change.downside.count",
+              "repeat"
+            ]
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.evoke.change.downside.count",
+                  3,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "flow",
+                5151
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.change.downside.count",
+                  0,
+                  ">"
+                ],
+                [
+                  "params.evoke.change.downside.count",
+                  3,
+                  "<"
+                ],
+                [
+                  "params.evoke.change.downside.dontKnow",
+                  true,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "flow",
+                5151
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.change.downside.count",
+                  0,
+                  "=="
+                ],
+                [
+                  "params.evoke.change.downside.dontKnow",
+                  true,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                4273
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.change.downside.count",
+                  0,
+                  ">"
+                ],
+                [
+                  "params.evoke.change.downside.count",
+                  3,
+                  "<"
+                ],
+                [
+                  "params.evoke.change.downside.last",
+                  null,
+                  "!="
+                ],
+                [
+                  "params.evoke.change.downside.dontKnow",
+                  false,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                4272
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.change.downside.last",
+                  null,
+                  "=="
+                ],
+                [
+                  "params.evoke.change.downside.dontKnow",
+                  false,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                4272
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": []
+        },
+        {
+          "id": 4273,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "Perhaps I can share something that I could think of?"
+              ]
+            }
+          ],
+          "intents": [
+            [
+              "yes_no",
+              "params.evoke.change.downside.share"
+            ]
+          ],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.evoke.change.downside.share",
+                  "yes",
+                  "=="
+                ]
+              ],
+              "text": [
+                "Sure! Not using condoms can leave you vulnerable to getting STIs, some of which can impact your health and your sexual relationship."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.change.downside.share",
+                  "no",
+                  "=="
+                ]
+              ],
+              "text": [
+                "No problem, I'm sure you will seek the information yourself if you would like to."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.change.downside.share",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "I'm sorry, I didn't get that. Could you rephrase what you just said?"
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.evoke.change.downside.share",
+                  "yes",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "flow",
+                5151
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.change.downside.share",
+                  "no",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "flow",
+                5151
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.change.downside.share",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                4272
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "id": 5151,
+      "title": "evoke summary",
+      "description": "Summary part of the evoke flow",
+      "conditions": [],
+      "states": [
+        {
+          "id": 5110,
+          "conditions": [],
+          "questions": [],
+          "intents": [],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.evoke.change.benefit.dontKnow",
+                  true,
+                  "=="
+                ],
+                [
+                  "params.evoke.change.downside.dontKnow",
+                  true,
+                  "=="
+                ],
+                [
+                  "params.evoke.change.benefit.count",
+                  0,
+                  "=="
+                ],
+                [
+                  "params.evoke.change.downside.count",
+                  0,
+                  "=="
+                ]
+              ],
+              "text": [
+                "Since our last conversation, we tried to explore some of the reasons you might have for incorporating condoms more consistently into a new exclusive sexual relationship. Through this exercise, it seems that you might not be fully convinced of the role that condom use plays in preventing STIs."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.change.benefit.count",
+                  0,
+                  ">"
+                ],
+                [
+                  "params.evoke.change.downside.count",
+                  0,
+                  ">"
+                ]
+              ],
+              "text": [
+                "Since our last conversation, we have gone deeper into some of the reasons you might have for incorporating condoms more consistently into a new exclusive sexual relationship. You mentioned that a potential upside could be {{ params.evoke.change.benefit.summary-comment }}, and that by not using condoms, {{ params.evoke.change.downside.summary-comment }}."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.change.benefit.count",
+                  0,
+                  ">"
+                ],
+                [
+                  "params.evoke.change.downside.count",
+                  0,
+                  "=="
+                ]
+              ],
+              "text": [
+                "Since our last conversation, we tried to explore some of the reasons you might have for incorporating condoms more consistently into a new exclusive sexual relationship. You mentioned that a potential upside could be {{ params.evoke.change.benefit.summary-comment }} but there probably weren't any downsides that stood out to you."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.change.benefit.count",
+                  0,
+                  "=="
+                ],
+                [
+                  "params.evoke.change.downside.count",
+                  0,
+                  ">"
+                ]
+              ],
+              "text": [
+                "Since our last conversation, we tried to explore some of the reasons you might have for incorporating condoms more consistently into a new exclusive sexual relationship. You mentioned that by not using condoms, {{ params.evoke.change.downside.summary-comment }}."
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.evoke.change.benefit.dontKnow",
+                  true,
+                  "=="
+                ],
+                [
+                  "params.evoke.change.downside.dontKnow",
+                  true,
+                  "=="
+                ],
+                [
+                  "params.evoke.change.benefit.count",
+                  0,
+                  "=="
+                ],
+                [
+                  "params.evoke.change.downside.count",
+                  0,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                5111
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.change.benefit.count",
+                  0,
+                  ">"
+                ],
+                [
+                  "params.evoke.change.downside.count",
+                  0,
+                  ">"
+                ]
+              ],
+              "trigger": [
+                "state",
+                5111
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.change.benefit.count",
+                  0,
+                  ">"
+                ],
+                [
+                  "params.evoke.change.downside.count",
+                  0,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                5111
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.change.benefit.count",
+                  0,
+                  "=="
+                ],
+                [
+                  "params.evoke.change.downside.count",
+                  0,
+                  ">"
+                ]
+              ],
+              "trigger": [
+                "state",
+                5111
+              ]
+            }
+          ],
+          "type": "monologue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 5111,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "Perhaps we could sum up how you feel about this. How important does it seem to you to engage in consistent condom use for the first 3 months until you and your new sexual partner get tested? Give me a number from 1 to 10, where 10 means very important."
+              ]
+            }
+          ],
+          "intents": [],
+          "entities": [
+            [
+              "numbers",
+              "params.evoke.importanceNumber"
+            ]
+          ],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.evoke.importanceNumber",
+                  7,
+                  ">="
+                ],
+                [
+                  "params.evoke.importanceNumber",
+                  10,
+                  "<="
+                ]
+              ],
+              "text": [
+                "This would be very important to you then."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.importanceNumber",
+                  7,
+                  "<"
+                ],
+                [
+                  "params.evoke.importanceNumber",
+                  4,
+                  ">"
+                ]
+              ],
+              "text": [
+                "It seems like in spite of some other reasons, you do consider this quite important."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.importanceNumber",
+                  4,
+                  "<="
+                ],
+                [
+                  "params.evoke.importanceNumber",
+                  0,
+                  ">"
+                ]
+              ],
+              "text": [
+                "Condom use doesn't feel important to you, but you have your reasons."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.importanceNumber",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "Sorry about that, I didn't catch what you said. Let's try again."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.importanceNumber",
+                  10,
+                  ">"
+                ]
+              ],
+              "text": [
+                "I'm sorry but you need to give me a number between 1 and 10! Try again?"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.importanceNumber",
+                  0,
+                  "=="
+                ]
+              ],
+              "text": [
+                "I'm sorry but you need to give me a number between 1 and 10! Try again?"
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.evoke.importanceNumber",
+                  7,
+                  ">="
+                ],
+                [
+                  "params.evoke.importanceNumber",
+                  10,
+                  "<="
+                ]
+              ],
+              "trigger": [
+                "state",
+                5112
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.importanceNumber",
+                  7,
+                  "<"
+                ],
+                [
+                  "params.evoke.importanceNumber",
+                  4,
+                  ">"
+                ]
+              ],
+              "trigger": [
+                "state",
+                5112
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.importanceNumber",
+                  4,
+                  "<="
+                ],
+                [
+                  "params.evoke.importanceNumber",
+                  0,
+                  ">"
+                ]
+              ],
+              "trigger": [
+                "state",
+                5112
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.importanceNumber",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                5111
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.importanceNumber",
+                  10,
+                  ">"
+                ]
+              ],
+              "trigger": [
+                "state",
+                5111
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.importanceNumber",
+                  0,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                5111
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 5112,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "I was wondering if you could tell me why you didn't choose a lower number?"
+              ]
+            }
+          ],
+          "intents": [],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [],
+              "text": [
+                "I appreciate you sharing that with me."
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [],
+              "trigger": [
+                "state",
+                5113
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 5113,
+          "conditions": [],
+          "questions": [],
+          "intents": [],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.evoke.importanceNumber",
+                  7,
+                  ">="
+                ]
+              ],
+              "text": [
+                "What I get from you is that you can see why condom use would help you and your partner practice safe sex, and you understand its value."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.importanceNumber",
+                  7,
+                  "<"
+                ]
+              ],
+              "text": [
+                "I can imagine that there are things that prevent you from making this change, and that makes sense. Imagine for a brief moment that those things disappeared, and you were presented with a clear and easy path towards safeguarding you and your partner against STIs through condom use. All that remains is that you go along this path."
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [],
+              "trigger": [
+                "state",
+                5114
+              ]
+            }
+          ],
+          "type": "monologue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 5114,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [
+                [
+                  "params.evoke.importanceNumber",
+                  7,
+                  ">="
+                ]
+              ],
+              "text": [
+                "After a small break, we can think about a simple first step that you can consider for implementing condom use with a sexual partner early on in your relationship. My hope is that we can decide on a step that works for you. Is this something you would like to hear more about?"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.importanceNumber",
+                  7,
+                  "<"
+                ]
+              ],
+              "text": [
+                "Is this something you could see yourself doing?"
+              ]
+            }
+          ],
+          "intents": [
+            [
+              "yes_no",
+              "params.evoke.continue"
+            ]
+          ],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.evoke.continue",
+                  "yes",
+                  "=="
+                ]
+              ],
+              "text": [
+                "I\u2019m glad to hear it. See you then! :) "
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.continue",
+                  "no",
+                  "=="
+                ]
+              ],
+              "text": []
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.continue",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "I'm sorry, I didn't get that. Could you rephrase what you just said?"
+              ]
+            }
+          ],
+          "actions": [
+            [
+              "set_on_hold_time",
+              "progress.onhold.start",
+              "post"
+            ],
+            [
+              "set_on_hold_true",
+              "progress.onhold.is",
+              "post"
+            ]
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.evoke.continue",
+                  "yes",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "flow",
+                10000
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.continue",
+                  "no",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "flow",
+                9999
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.evoke.continue",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                5114
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": []
+        }
+      ]
+    },
+    {
+      "id": 2222,
+      "title": "plan gender",
+      "description": "Messages asking the gender in plan flow",
+      "conditions": [],
+      "states": [
+        {
+          "id": 2201,
+          "conditions": [],
+          "questions": [],
+          "intents": [],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [],
+              "text": [
+                "I'd like to pause here and reflect on the fact that you've come this far in our conversation. That shows me that you are willing to listen and engage in discussion, which I appreciate.",
+                "A few minutes ago, we talked about how you would like to try incorporating condom use in a new relationship with your partner."
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [],
+              "trigger": [
+                "state",
+                2203
+              ]
+            }
+          ],
+          "type": "monologue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 2203,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "I've been made aware that I can provide more specific advice if you tell me your gender. If you'd like to, type in the gender you identify with."
+              ]
+            }
+          ],
+          "intents": [],
+          "entities": [
+            [
+              "gender",
+              "params.gender"
+            ]
+          ],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.gender",
+                  null,
+                  "!="
+                ]
+              ],
+              "text": [
+                "Noted!"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.gender",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "I'm sorry, I didn't get that. Could you rephrase what you just said?"
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.gender",
+                  null,
+                  "!="
+                ]
+              ],
+              "trigger": [
+                "state",
+                2204
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.gender",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                2202
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 2204,
+          "conditions": [],
+          "questions": [],
+          "intents": [],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [],
+              "text": [
+                "As I understand it, there are some steps you can take before actually engaging in condom use so you can feel prepared. These are: buy, carry, discuss and try. This means that before using condoms, it is helpful to first purchase them, make sure to keep them accessible where you will need them, discuss the decision with your partner to use them and become more comfortable with them."
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [],
+              "trigger": [
+                "state",
+                2205
+              ]
+            }
+          ],
+          "type": "monologue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 2205,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "Does this make sense to you?"
+              ]
+            }
+          ],
+          "intents": [
+            [
+              "yes_no",
+              "params.plan.activitySense"
+            ]
+          ],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.plan.activitySense",
+                  "yes",
+                  "=="
+                ]
+              ],
+              "text": [
+                "Nice!"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.activitySense",
+                  "no",
+                  "=="
+                ]
+              ],
+              "text": [
+                "That's alright. I have an idea. Thinking about your own relationship, I would like you to pick the option that you feel applies to you and your partner."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.activitySense",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "I'm sorry, I didn't get that. Could you rephrase what you just said?"
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.plan.activitySense",
+                  "yes",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                2206
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.activitySense",
+                  "no",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                2207
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.activitySense",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                2205
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 2206,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "Out of the four steps, or activities, I mentioned, which sounded like a good first step? Remember to think about what makes sense for your own relationship?"
+              ]
+            }
+          ],
+          "intents": [
+            [
+              "preparation_activities",
+              "params.plan.prepAct"
+            ]
+          ],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.plan.prepAct",
+                  null,
+                  "!="
+                ]
+              ],
+              "text": [
+                "Thanks, I appreciate how cooperative you\u2019re being with me :)"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.prepAct",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "I'm sorry, I didn't get that. Could you rephrase what you just said?"
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.plan.prepAct",
+                  null,
+                  "!="
+                ]
+              ],
+              "trigger": [
+                "state",
+                2208
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.prepAct",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                2206
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 2207,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [
+                [
+                  "params.gender",
+                  "female",
+                  "=="
+                ]
+              ],
+              "text": [
+                "A ) We need to buy condoms \n B ) We have condoms but need to make them more accessible in the moment \n C ) We need to discuss condom use first \n D ) My partner needs to become more comfortable with condoms"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.gender",
+                  "male",
+                  "=="
+                ]
+              ],
+              "text": [
+                "A ) We need to buy condoms \n B ) We have condoms but need to make them more accessible in the moment \n C ) We need to discuss condom use first \n D ) I need to become more comfortable with condoms"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.gender",
+                  "not-say",
+                  "=="
+                ]
+              ],
+              "text": [
+                "A ) We need to buy condoms \n B ) We have condoms but need to make them more accessible in the moment \n C ) We need to discuss condom use first \n D ) We need to become more comfortable with condoms"
+              ]
+            }
+          ],
+          "intents": [],
+          "entities": [],
+          "multipleChoice": [
+            "a,b,c,d",
+            "buy,carry,discuss,try",
+            "params.plan.prepAct"
+          ],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.plan.prepAct",
+                  null,
+                  "!="
+                ]
+              ],
+              "text": [
+                "Thanks, I appreciate how cooperative you\u2019re being with me :)"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.prepAct",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "I'm sorry, I didn't get that. Could you rephrase what you just said?"
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.plan.prepAct",
+                  null,
+                  "!="
+                ]
+              ],
+              "trigger": [
+                "state",
+                2208
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.prepAct",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                2207
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 2208,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "Now that you have selected a preparatory step that is relevant to you, try making a short but specific plan to accomplish it remember to include the what, when, where and how. An example is, \"I will order condoms online from Amazon tomorrow evening.\""
+              ]
+            }
+          ],
+          "intents": [],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [],
+              "text": [
+                "Nice work! "
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [],
+              "trigger": [
+                "state",
+                2209
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 2209,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "How confident do you feel about making this happen? Give me a number from 1 to 10, where 10 means very confident."
+              ]
+            }
+          ],
+          "intents": [],
+          "entities": [
+            [
+              "numbers",
+              "params.plan.senseNumber"
+            ]
+          ],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.plan.senseNumber",
+                  7,
+                  "<"
+                ],
+                [
+                  "params.plan.senseNumber",
+                  0,
+                  ">"
+                ]
+              ],
+              "text": [
+                "That's perfectly alright."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.senseNumber",
+                  7,
+                  ">="
+                ],
+                [
+                  "params.plan.senseNumber",
+                  10,
+                  "<="
+                ]
+              ],
+              "text": [
+                "You're confident, that's encouraging :) Then my work here is done for today. You\u2019ve told me about your plan, and how you will go about it. I appreciate that you have taken the time to discuss this topic with me, and I hope you found it insightful!"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.senseNumber",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "I'm sorry I didn't get that. Try again? Give me a number!"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.senseNumber",
+                  10,
+                  ">"
+                ]
+              ],
+              "text": [
+                "I'm sorry but you need to give me a number between 1 and 10! Try again?"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.senseNumber",
+                  0,
+                  "=="
+                ]
+              ],
+              "text": [
+                "I'm sorry but you need to give me a number between 1 and 10! Try again?"
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.plan.senseNumber",
+                  7,
+                  "<"
+                ],
+                [
+                  "params.plan.senseNumber",
+                  0,
+                  ">"
+                ]
+              ],
+              "trigger": [
+                "state",
+                2210
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.senseNumber",
+                  7,
+                  ">="
+                ],
+                [
+                  "params.plan.senseNumber",
+                  10,
+                  "<="
+                ]
+              ],
+              "trigger": [
+                "flow",
+                9999
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.senseNumber",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                2209
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.senseNumber",
+                  10,
+                  ">"
+                ]
+              ],
+              "trigger": [
+                "state",
+                2209
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.senseNumber",
+                  0,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                2209
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 2210,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "What is something that you think might get in the way of your goal?"
+              ]
+            }
+          ],
+          "intents": [
+            [
+              "plan_challenges",
+              "params.plan.challenge"
+            ]
+          ],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.plan.challenge",
+                  null,
+                  "!="
+                ]
+              ],
+              "text": [
+                "It's good to think about the challenges we might face, so we can think of potential solutions."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.challenge",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "Oops, sorry about that! I couldn't understand what you just said. Could you rephrase?"
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.plan.challenge",
+                  null,
+                  "!="
+                ]
+              ],
+              "trigger": [
+                "state",
+                2211
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.challenge",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                2210
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 2211,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "Can you think of anything that you can do if you run into this obstacle?"
+              ]
+            }
+          ],
+          "intents": [
+            [
+              "dont_know",
+              "params.plan.dontKnow"
+            ]
+          ],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.plan.dontKnow",
+                  true,
+                  "=="
+                ]
+              ],
+              "text": [
+                "That's alright."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.dontKnow",
+                  false,
+                  "=="
+                ]
+              ],
+              "text": [
+                "Well done. You're capable of coming up with solutions on your own. If you would like to, you can check out the following website for additional tips. \n https://sense.info/nl "
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.plan.dontKnow",
+                  true,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                2212
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.dontKnow",
+                  false,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                2299
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 2212,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "If you would like, I could share some information that could help?"
+              ]
+            }
+          ],
+          "intents": [
+            [
+              "yes_no",
+              "params.plan.help"
+            ]
+          ],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.plan.help",
+                  "yes",
+                  "=="
+                ]
+              ],
+              "text": [
+                "Great, thank you for your trust!"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.help",
+                  "no",
+                  "=="
+                ]
+              ],
+              "text": [
+                "No problem, I\u2019m sure that when the situation arises, you will know how to deal with it!"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.help",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "I'm sorry, I didn't get that. Could you rephrase what you just said?"
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.plan.help",
+                  "yes",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                2213
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.help",
+                  "no",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                2299
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.help",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                2212
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 2213,
+          "conditions": [],
+          "questions": [],
+          "intents": [],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.plan.challenge",
+                  "buy-embarrassment",
+                  "=="
+                ]
+              ],
+              "text": [
+                "If you have concerns about going to a apotheek, try online! \n https://sense.info/en/condom-pill-and-more/condoms/buying-and-storing-condoms"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.challenge",
+                  "buy-logistic",
+                  "=="
+                ]
+              ],
+              "text": [
+                "You can find condoms at your local apotheek - check out websites for an even wider range. \n https://sense.info/en/condom-pill-and-more/condoms/buying-and-storing-condoms"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.challenge",
+                  "carry-embarrassment",
+                  "=="
+                ]
+              ],
+              "text": [
+                "There is no shame in carrying them in your bag, pocket or even placing them on your bedside table! Chances are your partner will be grateful. \n https://sense.info/en/condom-pill-and-more/condoms/buying-and-storing-condoms"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.challenge",
+                  "carry-logistic",
+                  "=="
+                ]
+              ],
+              "text": [
+                "Try putting several in important rooms, as well as in different bags! \n https://sense.info/en/condom-pill-and-more/condoms/buying-and-storing-condoms"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.challenge",
+                  "discuss-embarrassment",
+                  "=="
+                ]
+              ],
+              "text": [
+                "Sex can be an embarassing topic but it doesn't have to be if both individuals engage in an open conversation. \n https://sense.info/en/condom-pill-and-more/condoms/talking-about-using-condoms"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.challenge",
+                  "discuss-upset",
+                  "=="
+                ]
+              ],
+              "text": [
+                "Conversations about sex can trigger uncomfortable feelings about intimacy and trust but there are ways you can make it a respectful conversation. \n https://sense.info/en/condom-pill-and-more/condoms/talking-about-using-condoms"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.challenge",
+                  "try-logistic",
+                  "=="
+                ]
+              ],
+              "text": [
+                "Not everyone is taught how to use condoms properly - luckily there are plenty of resources that you can explore in the privacy of your home. \n https://sense.info/en/condom-pill-and-more/condoms/how-use-condom"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.challenge",
+                  "try-experience",
+                  "=="
+                ]
+              ],
+              "text": [
+                "Using condoms can be a complicated experience and can put people off. Finding what works for you is the secret to overcoming this feeling! \n https://sense.info/en/condom-pill-and-more/condoms/types-condoms"
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.plan.challenge",
+                  "buy-embarrassment",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                2214
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.challenge",
+                  "buy-logistic",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                2214
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.challenge",
+                  "carry-embarrassment",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                2214
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.challenge",
+                  "carry-logistic",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                2214
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.challenge",
+                  "discuss-embarrassment",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                2214
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.challenge",
+                  "discuss-upset",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                2214
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.challenge",
+                  "try-logistic",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                2214
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.challenge",
+                  "try-experience",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                2214
+              ]
+            }
+          ],
+          "type": "monologue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 2214,
+          "conditions": [],
+          "questions": [
+            {
+              "conditions": [],
+              "text": [
+                "Do you feel like this information will help you?"
+              ]
+            }
+          ],
+          "intents": [
+            [
+              "yes_no",
+              "params.plan.willHelp"
+            ]
+          ],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "params.plan.willHelp",
+                  "yes",
+                  "=="
+                ]
+              ],
+              "text": [
+                "I\u2019m glad to be of help!"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.willHelp",
+                  "no",
+                  "=="
+                ]
+              ],
+              "text": [
+                "Ah, that\u2019s okay. Here is the link to the homepage of the website run by our partner, the SOA AIDS Foundation: www.sense.info.If the link I provided earlier was not helpful, perhaps you can explore the website and find what you\u2019re looking for!"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.willHelp",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "I'm sorry, I didn't get that. Could you rephrase what you just said?"
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "params.plan.willHelp",
+                  "yes",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                2299
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.willHelp",
+                  "no",
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                2299
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.plan.willHelp",
+                  null,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "state",
+                2214
+              ]
+            }
+          ],
+          "type": "dialogue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        },
+        {
+          "id": 2299,
+          "conditions": [],
+          "questions": [],
+          "intents": [],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [],
+              "text": [
+                "Then my work here is done for today. You\u2019ve told me about your plan, and how you will go about it. I appreciate that you have taken the time to discuss this topic with me, and I hope you found it insightful!"
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [],
+              "trigger": [
+                "flow",
+                9999
+              ]
+            }
+          ],
+          "type": "monologue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "id": 9999,
+      "title": "goodbye",
+      "description": "Goodbye messages to end the conversation",
+      "conditions": [],
+      "states": [
+        {
+          "id": 9910,
+          "conditions": [],
+          "questions": [],
+          "intents": [],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [],
+              "text": [
+                "Maybe I\u2019ll catch up with you when I am upgraded to my next prototype!",
+                "Have a nice day! :)"
+              ]
+            }
+          ],
+          "triggers": [
+            {
+              "conditions": [],
+              "trigger": [
+                "flow",
+                10000
+              ]
+            }
+          ],
+          "type": "monologue",
+          "multipleChoice": [],
+          "generators": [],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "id": 10000,
+      "title": "onhold",
+      "description": "On hold messages, in case the user wants to write the bot off-times.",
+      "conditions": [],
+      "states": [
+        {
+          "id": 10001,
+          "conditions": [],
+          "questions": [],
+          "intents": [],
+          "entities": [],
+          "responses": [
+            {
+              "conditions": [
+                [
+                  "progress.onhold.is",
+                  true,
+                  "=="
+                ]
+              ],
+              "text": [
+                "I will be with you in a second! See you soon!",
+                "Give me a minute to get prepared!"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "progress.onhold.is",
+                  false,
+                  "=="
+                ],
+                [
+                  "progress.flow.past",
+                  5757,
+                  "in"
+                ],
+                [
+                  "progress.flow.past",
+                  6565,
+                  "in"
+                ],
+                [
+                  "progress.flow.past",
+                  5151,
+                  "in"
+                ],
+                [
+                  "progress.flow.past",
+                  9999,
+                  "in"
+                ]
+              ],
+              "text": [
+                "Hello again {{ name }}! I will see you in my next prototype!"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "progress.onhold.is",
+                  false,
+                  "=="
+                ],
+                [
+                  "progress.flow.past",
+                  5757,
+                  "in"
+                ],
+                [
+                  "progress.flow.past",
+                  6565,
+                  "!in"
+                ],
+                [
+                  "progress.flow.past",
+                  5151,
+                  "!in"
+                ]
+              ],
+              "text": [
+                "Hi, {{ name }}! Good to see you again."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "progress.onhold.is",
+                  false,
+                  "=="
+                ],
+                [
+                  "progress.flow.past",
+                  6565,
+                  "in"
+                ],
+                [
+                  "progress.flow.past",
+                  5151,
+                  "!in"
+                ]
+              ],
+              "text": [
+                "Hello again!"
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "progress.onhold.is",
+                  false,
+                  "=="
+                ],
+                [
+                  "progress.flow.past",
+                  5151,
+                  "in"
+                ]
+              ],
+              "text": [
+                "I'm glad you're back, {{ name }}! "
+              ]
+            }
+          ],
+          "actions": [
+            [
+              "get_on_hold",
+              "progress.onhold.is",
+              "repeat"
+            ]
+          ],
+          "triggers": [
+            {
+              "conditions": [
+                [
+                  "progress.onhold.is",
+                  true,
+                  "=="
+                ]
+              ],
+              "trigger": [
+                "flow",
+                10000
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "progress.onhold.is",
+                  false,
+                  "=="
+                ],
+                [
+                  "progress.flow.past",
+                  5757,
+                  "in"
+                ],
+                [
+                  "progress.flow.past",
+                  6565,
+                  "in"
+                ],
+                [
+                  "progress.flow.past",
+                  5151,
+                  "in"
+                ],
+                [
+                  "progress.flow.past",
+                  9999,
+                  "in"
+                ]
+              ],
+              "trigger": [
+                "flow",
+                10000
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "progress.onhold.is",
+                  false,
+                  "=="
+                ],
+                [
+                  "progress.flow.past",
+                  5757,
+                  "in"
+                ],
+                [
+                  "progress.flow.past",
+                  6565,
+                  "!in"
+                ],
+                [
+                  "progress.flow.past",
+                  5151,
+                  "!in"
+                ]
+              ],
+              "trigger": [
+                "flow",
+                4646
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "progress.onhold.is",
+                  false,
+                  "=="
+                ],
+                [
+                  "progress.flow.past",
+                  6565,
+                  "in"
+                ],
+                [
+                  "progress.flow.past",
+                  5151,
+                  "!in"
+                ]
+              ],
+              "trigger": [
+                "flow",
+                7777
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "progress.onhold.is",
+                  false,
+                  "=="
+                ],
+                [
+                  "progress.flow.past",
+                  5151,
+                  "in"
+                ]
+              ],
+              "trigger": [
+                "flow",
+                2222
+              ]
+            }
+          ],
+          "type": "monologue",
+          "multipleChoice": [],
+          "generators": []
+        }
+      ]
+    }
+  ]
+}
