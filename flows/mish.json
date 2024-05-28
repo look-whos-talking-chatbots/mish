@@ -2,6 +2,7 @@
   "version": "v1.1",
   "name": "mish",
   "description": "MISH: Motivational Intervieving for Sexual Health bot",
+  "language": "en",
   "slot_fillers": {
     "static_slots": {
       "params.sense.number-comment": [
@@ -1680,7 +1681,7 @@
                 ]
               ],
               "text": [
-                "You using condoms quite often tells me you might want to take responsibility for your sexual health. Perhaps sometimes, the decision to use them is not as simple.."
+                "You using condoms quite often tells me you might want to take responsibility for your sexual health. Perhaps sometimes, the decision to use them is not as simple."
               ]
             },
             {
@@ -3680,8 +3681,30 @@
             {
               "conditions": [],
               "text": [
-                "We have discussed quite a lot in this session so I'd like to go over that quickly.",
-                "You usually use condoms {{ params.condom.frequency }} with your sexual partner.",
+                "We have discussed quite a lot in this session so I'd like to go over that quickly."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.condom.frequency",
+                  null,
+                  "!="
+                ]
+              ],
+              "text": [
+                "You usually use condoms {{ params.condom.frequency }} with your sexual partner."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.number",
+                  null,
+                  "!="
+                ]
+              ],
+              "text": [
                 "The recommendation to use condoms in between periods of STI testing early on in the relationship seemed to make {{ params.sense.number-comment }} to you - you gave it a {{ params.sense.number }}."
               ]
             },
@@ -3747,6 +3770,18 @@
                 "You also told me about why you think this way, which convinced me that you have a good understanding of how condoms can be beneficial.",
                 "It's good that we were able to reach common ground on why condoms have a role to play in preventing STIs. Despite this being a short conversation, I'm glad I got to discuss this topic with you!",
                 "In the next conversation, I was thinking that we could explore some of the reasons you might have for implementing condom use in the early stage of your sexual relationship - this can help you make up your mind about condom use and role it plays for you."
+              ]
+            },
+            {
+              "conditions": [
+                [
+                  "params.sense.number",
+                  null,
+                  "=="
+                ]
+              ],
+              "text": [
+                "If you wouldn't mind continuing to talk to me, I was thinking that we could explore some of the reasons you might find for implementing condom use in the early stage of your sexual relationship - this can help you make up your mind about condom use and the role it can play for you."
               ]
             }
           ],
@@ -4132,13 +4167,7 @@
           "conditions": [],
           "questions": [
             {
-              "conditions": [
-                [
-                  "params.evoke.change.benefit.count",
-                  0,
-                  "=="
-                ]
-              ],
+              "conditions": [],
               "text": [
                 "My question to you is, can you think of how using condoms in the beginning of a new exclusive sexual relationship could benefit you and your partner?"
               ]

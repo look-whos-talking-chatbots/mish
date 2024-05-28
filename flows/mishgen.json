@@ -2,6 +2,7 @@
   "version": "v1.1",
   "name": "mishgen",
   "description": "Generative MISH: Motivational Intervieving for Sexual Health bot",
+  "language": "en",
   "slot_fillers": {
     "static_slots": {
       "params.sense.number-comment": [
@@ -4132,13 +4133,7 @@
           "conditions": [],
           "questions": [
             {
-              "conditions": [
-                [
-                  "params.evoke.change.benefit.count",
-                  0,
-                  "=="
-                ]
-              ],
+              "conditions": [],
               "text": [
                 "My question to you is, can you think of how using condoms in the beginning of a new exclusive sexual relationship could benefit you and your partner?"
               ]

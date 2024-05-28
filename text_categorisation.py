@@ -4,10 +4,10 @@ File contains the text classification functions for mish-based chatbots.
 
 import spacy
 
-from src.settings import CLASSIFIER_PATHS
+from .settings import CLASSIFIER_PATHS
 
 
-def intent_approximate_frequency(user_input):
+def intent_approximate_frequency(user_input, language):
     user_input = user_input.lower().replace('\'', '')
 
     # TODO: Check the word distance for negation words
@@ -48,7 +48,7 @@ def intent_approximate_frequency(user_input):
     return label
 
 
-def intent_sense_reason(user_input):
+def intent_sense_reason(user_input, language):
     user_input = user_input.lower()
 
     label = None
@@ -66,7 +66,7 @@ def intent_sense_reason(user_input):
     return label
 
 
-def intent_change_benefit(user_input):
+def intent_change_benefit(user_input, language):
     user_input = user_input.lower()
 
     label = None
@@ -95,7 +95,7 @@ def intent_change_benefit(user_input):
     return label
 
 
-def intent_change_downside(user_input):
+def intent_change_downside(user_input, language):
     user_input = user_input.lower()
 
     label = None
@@ -124,7 +124,7 @@ def intent_change_downside(user_input):
     return label
 
 
-def intent_preparation_activities(user_input):
+def intent_preparation_activities(user_input, language):
     user_input = user_input.lower().replace('\'', '')
 
     label = None
@@ -146,7 +146,7 @@ def intent_preparation_activities(user_input):
     return label
 
 
-def intent_plan_challenges(user_input):
+def intent_plan_challenges(user_input, language):
     user_input = user_input.replace('\'', '').lower()
 
     label = None

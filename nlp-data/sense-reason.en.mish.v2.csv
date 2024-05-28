@@ -1,0 +1,148 @@
+text,label
+On the pill,pregnancy
+Taking the pill,pregnancy
+If I'm using the pill to prevent getting pregnant,pregnancy
+Already on birth control,pregnancy
+Using birth control,pregnancy
+Condoms just prevent pregnancy,pregnancy
+They just stop you from getting pregnant,pregnancy
+Know I'm not going to get pregnant,pregnancy
+Condoms are mainly birth control,pregnancy
+There are other contraceptives,pregnancy
+On contraception,pregnancy
+Using contraception,pregnancy
+Already made sure she's not going to get pregnant,pregnancy
+Using the pill to avoid pregnancy,pregnancy
+No risk of becoming pregnant,pregnancy
+Can't become pregnant,pregnancy
+Seems unnecessary to use both condoms and the pill,pregnancy
+Don't wanna use both condoms and things like the pill or birth control,pregnancy
+Doesn't the pill prevent infections too,pregnancy
+I'm sure I would know,obvious-symptoms
+I would have symptoms,obvious-symptoms
+If I was experiencing some symptoms,obvious-symptoms
+Why get tested if I don't have any symptoms,obvious-symptoms
+It would be obvious if one of us had an STI ,obvious-symptoms
+I think it would be easy to figure out,obvious-symptoms
+Makes sense only if we see effects or symptoms,obvious-symptoms
+If you notice something weird or abnormal,obvious-symptoms
+Infections have symptoms something would be obviously wrong,obvious-symptoms
+You would notice something wrong with your body,obvious-symptoms
+I would be able to tell,obvious-symptoms
+If I'm experiencing symptoms,obvious-symptoms
+If nothing seems wrong then you're probably okay,obvious-symptoms
+If I'm feeling sick,obvious-symptoms
+I know I don't have an STI,obvious-symptoms
+What if you're sure you don't have one,obvious-symptoms
+It would make you ill,obvious-symptoms
+If I got sick ,obvious-symptoms
+Nothing bad has happened before,no-bad-history
+It was fine,no-bad-history
+Done it without condoms and didn't get infected or anything,no-bad-history
+Turned out okay,no-bad-history
+Never got an STI,no-bad-history
+It's been okay,no-bad-history
+It was okay,no-bad-history
+So far it's been fine,no-bad-history
+Wasn't too bad,no-bad-history
+Hasn't been too bad,no-bad-history
+No bad experiences,no-bad-history
+Haven't gotten an STI before,no-bad-history
+Haven't gotten a girl pregnant before,no-bad-history
+Nothing has happened yet,no-bad-history
+Until now it's been fine,no-bad-history
+Didn't get an infection,no-bad-history
+Didn't get pregnant,no-bad-history
+Even if something happened it was no big deal,severity
+Nothing major happened,no-bad-history
+Easily treated,severity
+Harmless,severity
+Just go to the doctor,severity
+Easy to fix,severity
+Can be cured with medicine,severity
+Just need some antibiotics,severity
+Just an infection,severity
+No big deal,severity
+It'll go away on its own,severity
+Easily cured,severity
+Only HIV is really bad,severity
+HIV is dangerous but the others are not as bad,severity
+It's no big deal,severity
+Even if anything happens it not too bad,severity
+Most STIs are not very bad,severity
+Not very serious,severity
+Isn't too serious,severity
+Effects aren't major,severity
+Not that major,severity
+Virgin,virgin
+Is a virgin,virgin
+Both virgins,virgin
+Virgin before this relationship,virgin
+Haven't had sex before,virgin
+Haven't done it before,virgin
+First time I had sex was with her,virgin
+Had sex for the first time,virgin
+First person I had sex with,virgin
+First person I slept with,virgin
+Only person I've done it with,virgin
+Only slept with one person,virgin
+Haven't had actual sex yet,virgin
+Haven't slept with anyone before,virgin
+STIs come from sex,virgin
+Done other stuff that aren't real or actual sex,virgin
+Haven't actually done it yet,virgin
+In an exclusive relationship with this person,monogamy
+Steady,monogamy
+With one person,monogamy
+Dating only one person,monogamy
+In a serious relationship,monogamy
+With my partner and no one else,monogamy
+Not with anyone else,monogamy
+Not seeing anyone else,monogamy
+Only sleeping with each other,monogamy
+Only with one person,monogamy
+Decided to be exclusive with each other,monogamy
+Only people who date casually need to be worried,monogamy
+Not sleeping around,monogamy
+I don't do hookups,monogamy
+Only people who hook up with other people get STIs,monogamy
+I heard only casual sex gives you infections,monogamy
+Not sleeping with anyone else,monogamy
+If you're committed,monogamy
+What if you've made it official,monogamy
+Got tested before,tested-before
+Test came back negative,tested-before
+Test was fine nothing,tested-before
+Already did a check up,tested-before
+Did a test some time ago,tested-before
+Doctor already checked me,tested-before
+Got a negative test,tested-before
+Don't have STIs I checked,tested-before
+Got the test done earlier,tested-before
+I got checked by the GP last year,tested-before
+Checked for STIs all good,tested-before
+Went through the test and I don't have any,tested-before
+In the clear,tested-before
+Test results were good no infections,tested-before
+Doctor told me I'm good,tested-before
+After testing everything comes back okay,tested-before
+Did the test and it says I'm good,tested-before
+Did the test I don't have any,tested-before
+Know they wouldn't cheat,trust
+Sure they don't have an STI,trust
+Know they wouldn't sleep with anyone else,trust
+Wouldn’t cheat,trust
+Trust my partner,trust
+It's about trust,trust
+Asking to use condoms is a sign of not trusting,trust
+Know they're not cheating,trust
+Sure my partner is loyal,trust
+Trust each other,trust
+Shows you have faith,trust
+You believe they're loyal,trust
+I know they're not sleeping with anyone else,trust
+You know they're not cheating,trust
+Being faithful,trust
+Can be sure they're not having sex with anyone else,trust
+Not using condoms shows trust and faith,trust
+Not going to cheat,trust
